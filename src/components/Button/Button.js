@@ -2,17 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import { 
 ButtonThemed,
- } from "./ButtonStyle";
+} from "./ButtonStyle";
 
-export function Button({theme="primary"}) {
+export function Button({theme="primary", label="Button"}) {
     return (
     <>
-        <ButtonThemed theme={theme}>Primary</ButtonThemed>
+        <ButtonThemed theme={theme}>{label}</ButtonThemed>
     </>
     )
 }
 
-// prop types goes here
 Button.propTypes = {
-    theme: PropTypes.string
+theme: PropTypes.string,
+label: PropTypes.string,
 };
